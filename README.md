@@ -1,5 +1,5 @@
 
-# CSCI 1302 - Minesweeper Alpha Project
+# CSCI 1302 - Minesweeper Alpha v2017.f
 
 **DUE FRI 2017-09-15 (Sep 15) @ 11:55 PM**
 
@@ -113,7 +113,7 @@ once and only once:
  /    \| | '_ \ / _ \/ __\ \ /\ / / _ \/ _ \ '_ \ / _ \ '__|
 / /\/\ \ | | | |  __/\__ \\ V  V /  __/  __/ |_) |  __/ |
 \/    \/_|_| |_|\___||___/ \_/\_/ \___|\___| .__/ \___|_|
-                                     ALPHA |_| EDITION
+                             ALPHA EDITION |_| v2017.f
 ```
 
 Take care when printing this message out to the screen. You will probably need
