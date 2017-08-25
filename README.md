@@ -1,7 +1,7 @@
 
 # CSCI 1302 - Minesweeper Alpha Project
 
-**DUE Sunday 2016-09-15 (Sep 15) @ 11:55 PM**
+**DUE FRI 2017-09-15 (Sep 15) @ 11:55 PM**
 
 This repository contains the skeleton code for the Minesweeper Alpha project
 assigned to the students in the Fall 2017 CSCI 1302 classes
@@ -46,7 +46,7 @@ add a GUI to it later as well. Interestingly, the organization of some of the
 classes in this project will also introduce you to some elementary aspects of
 game programming.
 
-This project must be implemented in Java 7 or 8, and it must compile and run 
+This project must be implemented in Java 8, and it must compile and run 
 correctly on Nike using instructions that you will provide in an
 <code>INSTRUCTIONS.md</code> file (more on that later).
 
