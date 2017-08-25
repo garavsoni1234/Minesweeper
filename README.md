@@ -1,14 +1,13 @@
 
 # CSCI 1302 - Minesweeper Alpha Project
 
-**DUE Sunday 2016-01-31 (Jan 31st) @ 11:59 PM**
+**DUE Sunday 2016-09-15 (Sep 15) @ 11:55 PM**
 
 This repository contains the skeleton code for the Minesweeper Alpha project
-assigned to the students in the Spring 2016 CSCI 1302 classes
+assigned to the students in the Fall 2017 CSCI 1302 classes
 at the University of Georgia. 
 
-**Please read the entirety of this file before
-beginning your project.** 
+**Please read the entirety of this file before beginning your project.** 
 
 ## Academic Honesty
 
@@ -30,7 +29,7 @@ command while inside of your project directory.
 ## Project Description
 
 This first project is meant to ensure that you are able to apply and extend
-your prequisite knowledge as well as introduce you to developing and testing
+your prerequisite knowledge as well as introduce you to developing and testing
 a Java 7 application in a Linux environment (i.e., the Nike development
 server). Many aspects of this project will be new to you. You will be asked
 to do things that you have never been given explicit directions for before.
@@ -85,7 +84,7 @@ player marks a square as potentially containing a mine, a <code>?</code> is
 displayed in the square. When the player marks the square as definitely 
 containing a mine, a flag, represented as <code>F</code> is displayed in the 
 square. The player can mark or reveal any square in the grid, even squares that
-have already been marked or reveleaed. The logic for determining what happens
+have already been marked or revealed. The logic for determining what happens
 to the square is always the same.
 
 The game is won when both all of the mines are located (i.e., all squares 
@@ -628,6 +627,21 @@ command:
 $ java Minesweeper seed1.txt
 ```
 
+Given a [`File`](https://docs.oracle.com/javase/8/docs/api/java/io/File.html) 
+object, you can create a [`Scanner`](https://docs.oracle.com/javase/8/docs/api/java/util/Scanner.html) 
+object that reads input from a file using something similar to the following 
+code snippet:
+
+```java
+try {
+  File f = new File("seed1.txt");
+  Scanner s = new Scanner(f);
+  // use scanner here
+} catch (Exception e) {
+  // handler exception here
+} // try
+```
+
 ## Project Tasks
 
 The tasks for this project are mostly related to implementing methods inside of
@@ -637,10 +651,9 @@ please read the following list of tasks carefully:
  * Implement or finish implementing the methods in <code>Minesweeper.java</code>
    as per the project description provided above. Be sure to include in-line 
    Java comments and white space where appropriate in order to make your code 
-   both readable and clear.
-
- * Make sure that all methods are documented using JavaDoc comments, even
-   methods that you create yourself.
+   both readable and clear. Since the `Minesweeper` class is in a package, you
+   may need to restructure your project directory. Feel free to do this manually
+   or using Maven (as seen in Homework 2).
 
  * Update the @author tag in the JavaDoc comment for the 
    <code>Minesweeper</code> class in <code>Minesweeper.java</code> to include 
@@ -650,7 +663,9 @@ please read the following list of tasks carefully:
    to both compile and run your program, assuming one is in the same directory
    as <code>Minesweeper.java</code>. Instructions for running your program
    should be consistent with the documentation provided to you in the
-   <code>main</code> method in <code>Minesweeper.java</code>.
+   <code>main</code> method in <code>Minesweeper.java</code>. If you use Maven,
+   then will need to include `-Dexec.args` (look this up) in your instructions
+   in order to accomodate the command line arguments for your program. 
 
 ## Project Grading
 
@@ -664,13 +679,22 @@ you in the <code>main</code> method in <code>Minesweeper.java</code>, you can us
 the following command to execute the first test case:
 
 ```
-$ java Minesweeper seed1.txt < test1.txt > test1.result.txt
+$ java -cp /path/to/default cs1302.p1.Minesweeper seed1.txt < test1.txt > test1.result.txt
+```
+
+If using Maven, it might look something like this:
+
+```
+$ mvn exec:java -Dexec.mainClass="cs1302.p1.Minesweeper" -Dexec.args="seed1.txt" < test1.txt > test1.result.txt
 ```
 
 This command tells the program to create a game using the <code>seed1.txt</code>
 seed file, execute the commands contained in the <code>test1.txt</code> test case 
 file, and output the results into the <code>test1.result.txt</code> file. Once
 you have your result file, you can compare it to <code>test1.expected.txt</code>.
+This is to help you automate the testing of your program. Instead of typing in
+the player commands manually, the program gets user input from
+<code>test1.txt</code>.
 
 ## Extra Credit Tasks
 
@@ -761,7 +785,7 @@ On Nike, execute the following terminal command in order to download the project
 files into sub-directory within your present working directory:
 
 ```
-$ git clone https://github.com/mepcotterell-cs1302/cs1302-minesweeper-alpha.git
+$ git clone https://github.com/cs1302uga/cs1302-minesweeper-alpha.git
 ```
 
 This should create a directory called <code>cs1302-minesweeper-alpha</code> in
@@ -786,19 +810,11 @@ project directory and let <code>PROJ_DIR</code> represent the name of your
 project directory in the instructions provided below. If you've followed the
 instructions provided in this document, then the name of your project directory
 is likely <code>cs1302-minesweeper-alpha</code>. While in your project parent
-directory, execute the following command, depending on which section you are in:
+directory, execute the following command: 
 
-### CRN 26245
-
-    $ submit cs1302-minesweeper-alpha cs1302a
-
-### CRN 26311
-
-    $ submit cs1302-minesweeper-alpha cs1302b
-
-### CRN 36424
-
-    $ submit cs1302-minesweeper-alpha cs1302c
+```
+$ submit cs1302-minesweeper-alpha cs1302a
+```
 
 It is also a good idea to email a copy to yourself. To do this, simply execute 
 the following command, replacing the email address with your email address:
@@ -811,5 +827,4 @@ $ mutt -s "[cs1302] cs1302-minesweeper-alpha" -a cs1302-minesweeper-alpha.tar.gz
 If you have any problems submitting your project then please email your
 instructor as soon as possible. However, emailing him about something like this
 the day or night the project is due is probably not the best idea.
-
 

@@ -1,4 +1,6 @@
 
+package cs1302.p1;
+
 import java.io.File;
 
 /**
