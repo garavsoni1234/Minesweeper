@@ -23,7 +23,7 @@ development on nike.
 Updates will be posted here.
 
  * **T2017-09-05:** *Clarifying requirement.* When random mines are generated, 
-   the number of mines should be ```n = Math.ceil(rows * cols)``` where 
+   the number of mines should be ```n = Math.ceil(rows * cols) * 0.25``` where 
    ```rows``` and ```cols``` represent the number of rows and columns in the 
    minefield, respectively. 
 
