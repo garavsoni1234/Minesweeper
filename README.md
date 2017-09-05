@@ -23,9 +23,13 @@ development on nike.
 Updates will be posted here.
 
  * **T2017-09-05:** *Clarifying requirement.* When random mines are generated, 
-   the number of mines should be ```n = Math.ceil(rows * cols) * 0.25``` where 
+   the number of mines should be ```n = Math.ceil(rows * cols * 0.25)``` where 
    ```rows``` and ```cols``` represent the number of rows and columns in the 
    minefield, respectively. 
+   
+ * **T2017-09-05:** *Clarifying requirement.* To win the game, the user needs
+   to have all mines marked and the number of marks needs to equal the number
+   of mines.
 
 If there has been an update and you have already cloned the project to Nike, 
 then you can update your copy of the project using the <code>$ git pull</code>
