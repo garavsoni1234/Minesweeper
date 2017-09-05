@@ -22,6 +22,11 @@ development on nike.
 
 Updates will be posted here.
 
+ * **T2017-09-05:** *Clarifying requirement.* When random mines are generated, 
+   the number of mines should be ```n = Math.ceil(rows * cols)``` where 
+   ```rows``` and ```cols``` represent the number of rows and columns in the 
+   minefield, respectively. 
+
 If there has been an update and you have already cloned the project to Nike, 
 then you can update your copy of the project using the <code>$ git pull</code>
 command while inside of your project directory.
