@@ -96,10 +96,10 @@ square. The player can mark or reveal any square in the grid, even squares that
 have already been marked or revealed. The logic for determining what happens
 to the square is always the same.
 
-The game is won when both all of the mines are located (i.e., all squares 
-containing a mine are marked by the user as containing a mine) and when there 
-are no squares still marked as potentially containing a mine. At the end of the
-game the player is presented with a score. 
+The game is won when all of the mines are located (i.e., all squares 
+containing a mine are marked by the user as containing a mine) and the number 
+of marked squares equals the number of mines. At the end of the game the player 
+is presented with a score. 
 Let <code>rows</code>, <code>cols</code>, <code>mines</code>, and 
 <code>rounds</code> denote the number of rows in the grid, columns in the grid,
 total number of mines, and number of rounds completed, respectively. The 
