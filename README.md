@@ -27,7 +27,7 @@ Updates will be posted here.
    ```rows``` and ```cols``` represent the number of rows and columns in the 
    minefield, respectively. 
    
- * **T2017-09-05:** *Clarifying requirement.* To the game, the user needs
+ * **T2017-09-05:** *Clarifying requirement.* To win the game, the user needs
    to have all mines marked and the number of marks needs to equal the number
    of mines.
 
